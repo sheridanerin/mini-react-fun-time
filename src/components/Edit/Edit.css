@@ -1,4 +1,21 @@
 .edit-container {
-    background-color: red;
+    background-color: #4f91f9;
     height: 100vh;
+    padding: 20px;
+}
+
+.edit-container label {
+    width: 310px;
+    display: block;
+    margin: 10px auto;
+    text-align: left;
+}
+
+.edit-container input[type="text"] {
+    float: right;
+}
+
+.edit-container input[type="submit"] {
+    width: 100px;
+    margin-top: 40px;
 }
