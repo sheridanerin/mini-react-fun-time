@@ -13,15 +13,34 @@ export default class Edit extends Component {
         this.setState({[event.target.name]: event.target.value});
     }
 
-    handleSubmit(event) {
+    handleSubmit = (event) => {
         event.preventDefault();
+        //get playersList from out of local storage.
+        let playersList = JSON.parse(localStorage.getItem('playersList'));
+        //conditional to check if playersList is null before continuing
+        playersList = !playersList ? [] : playersList;
+        //push new entry to playersList
+        playersList.push(
+            {
+                name: this.state.name,
+                position: this.state.position
+            }
+        );
+        //save the whole thing back to local storage.
+        localStorage.setItem('playersList', JSON.stringify(playersList));
+        //setState back to empty so that the form clears.
+        this.setState({
+            name: '',
+            position: ''
+        })
+        this.formRef.reset();
     }
 
     render() {
         return (
             <div className="edit-container">
                 <h2>Edit Roster</h2>
-                <form onSubmit={this.handleSubmit}>
+                <form onSubmit={this.handleSubmit} ref={(el) => this.formRef = el}>
                     <label>
                         Player Name:
                         <input
