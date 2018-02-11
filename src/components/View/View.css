@@ -1,4 +1,23 @@
 .view-container {
-    background: blue;
+    background-color: #4f91f9;
     height: 100vh;
+    padding: 20px;
+}
+
+.player-line {
+    width: 310px;
+    list-style-type: none;
+    margin: 0 auto;
+    text-align: left;
+    padding: 15px;
+}
+
+.roster-entry-left {
+    float: left;
+    width: 49%;
+}
+
+.roster-entry-right {
+    float: right;
+    width: 50%;
 }
