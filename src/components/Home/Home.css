@@ -1,0 +1,15 @@
+.home-container {
+    background-color: #4f91f9;
+    height: 100vh;
+    padding: 20px;
+}
+
+.home-container span {
+    font-size: 35px;
+    animation: fadein 2s ease-in-out;
+}
+
+@keyframes fadein {
+  from { opacity: 0}
+  to   { opacity: 1}
+}
