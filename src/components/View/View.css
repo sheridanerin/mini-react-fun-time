@@ -5,7 +5,7 @@
 }
 
 .player-line {
-    width: 310px;
+    width: 520px;
     list-style-type: none;
     margin: 0 auto;
     text-align: left;
@@ -14,10 +14,15 @@
 
 .roster-entry-left {
     float: left;
-    width: 49%;
+    width: 33%;
 }
 
 .roster-entry-right {
     float: right;
-    width: 50%;
+    width: 45%;
+}
+
+.view-container .delete-button {
+    float: right;
+    width: 100px;
 }

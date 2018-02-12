@@ -9,6 +9,7 @@ export default class Edit extends Component {
             position: ''
         };
     }
+
     handleChange = (event) => {
         this.setState({[event.target.name]: event.target.value});
     }
